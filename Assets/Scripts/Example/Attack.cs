@@ -15,7 +15,7 @@ public class Attack : MonoBehaviour
     private static readonly int _Attack = Shader.PropertyToID("_Attack");
 
     private void Start() {
-        mpbHelper = MPBHelper.GetManager(target);
+        mpbHelper = MPBHelper.GetHelper(target);
     }
 
     [ContextMenu("Activate")]

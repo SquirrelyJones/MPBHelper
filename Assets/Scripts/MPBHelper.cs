@@ -62,13 +62,13 @@ public class MPBHelper : MonoBehaviour
 	// Float
 
 	public static void SetFloat(GameObject go, string param, float value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetFloat(param, value);
 	}
 
 	public static void SetFloat(GameObject go, int param, float value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetFloat(param, value);
 	}
@@ -88,13 +88,13 @@ public class MPBHelper : MonoBehaviour
 	// Float Array
 
 	public static void SetFloatArray(GameObject go, string param, float[] value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetFloatArray(param, value);
 	}
 
 	public static void SetFloatArray(GameObject go, int param, float[] value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetFloatArray(param, value);
 	}
@@ -114,13 +114,13 @@ public class MPBHelper : MonoBehaviour
 	// Vector
 
 	public static void SetVector(GameObject go, string param, Vector4 value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetVector(param, value);
 	}
 
 	public static void SetVector(GameObject go, int param, Vector4 value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetVector(param, value);
 	}
@@ -140,13 +140,13 @@ public class MPBHelper : MonoBehaviour
 	// Vector Array
 
 	public static void SetVectorArray(GameObject go, string param, Vector4[] value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetVectorArray(param, value);
 	}
 
 	public static void SetVectorArray(GameObject go, int param, Vector4[] value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetVectorArray(param, value);
 	}
@@ -166,13 +166,13 @@ public class MPBHelper : MonoBehaviour
 	// Color
 
 	public static void SetColor(GameObject go, string param, Color value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetColor(param, value);
 	}
 
 	public static void SetColor(GameObject go, int param, Color value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetColor(param, value);
 	}
@@ -192,13 +192,13 @@ public class MPBHelper : MonoBehaviour
 	// RenderTexture
 
 	public static void SetTexture(GameObject go, string param, RenderTexture value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetTexture(param, value);
 	}
 
 	public static void SetTexture(GameObject go, int param, RenderTexture value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetTexture(param, value);
 	}
@@ -218,13 +218,13 @@ public class MPBHelper : MonoBehaviour
 	// Texture
 
 	public static void SetTexture(GameObject go, string param, Texture value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetTexture(param, value);
 	}
 
 	public static void SetTexture(GameObject go, int param, Texture value) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetTexture(param, value);
 	}
@@ -244,13 +244,13 @@ public class MPBHelper : MonoBehaviour
 	// Matrix
 
 	public static void SetMatrix(GameObject go, string param, Matrix4x4 matrix) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetMatrix(param, matrix);
 	}
 
 	public static void SetMatrix(GameObject go, int param, Matrix4x4 matrix) {
-		MPBHelper mpbManager = GetManager(go);
+		MPBHelper mpbManager = GetHelper(go);
 		if (mpbManager == null) return;
 		mpbManager.SetMatrix(param, matrix);
 	}
@@ -293,7 +293,7 @@ public class MPBHelper : MonoBehaviour
 		update = false;
 	}
 
-	public static MPBHelper GetManager( GameObject gameObject) {
+	public static MPBHelper GetHelper( GameObject gameObject) {
 		if(gameObject == null) return null;
 
 		MPBHelper mpbManager = gameObject.GetComponent<MPBHelper>();
@@ -307,8 +307,8 @@ public class MPBHelper : MonoBehaviour
 		return mpbManager;
 	}
 
-	public static MPBHelper GetManager(Transform trans) {
+	public static MPBHelper GetHelper(Transform trans) {
 		if (trans == null) return null;
-		return GetManager(trans.gameObject);
+		return GetHelper(trans.gameObject);
 	}
 }

@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     private static readonly int _Health = Shader.PropertyToID("_Health");
 
     private void Start() {
-        mpbHelper = MPBHelper.GetManager(target);
+        mpbHelper = MPBHelper.GetHelper(target);
         ApplyHealth();
     }
 

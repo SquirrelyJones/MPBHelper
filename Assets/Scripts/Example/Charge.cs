@@ -16,7 +16,7 @@ public class Charge : MonoBehaviour
 
     private void Start()
     {
-        mpbHelper = MPBHelper.GetManager(target);
+        mpbHelper = MPBHelper.GetHelper(target);
     }
 
     [ContextMenu("Activate")]

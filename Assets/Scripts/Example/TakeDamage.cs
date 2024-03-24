@@ -23,7 +23,7 @@ public class TakeDamage : MonoBehaviour
     }
 
     private void Start() {
-        mpbHelper = MPBHelper.GetManager(target);
+        mpbHelper = MPBHelper.GetHelper(target);
     }
 
     [ContextMenu("Activate")]
